@@ -4,9 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Centene</title>
-<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+margin: 0;
+font-family: Inter, sans-serif;
+background: #0b0b0b;
+color: #ffffff;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 24px 60px;
+position: relative;
+z-index: 10;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logo-icon {
+height: 36px;
+}
+
+.logo-name {
+height: 24px;
+}
+
+nav a {
+color: #ffffff;
+text-decoration: none;
+margin-left: 32px;
+font-weight: 400;
+}
+
+.hero {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 0 60px;
+overflow: hidden;
+}
+
+.hero-bg {
+position: absolute;
+left: 0;
+top: 0;
+width: 55%;
+height: 100%;
+background-image: url("Background.jpg");
+background-size: cover;
+background-position: left center;
+mask-image: radial-gradient(120% 80% at 0% 50%, black 60%, transparent 100%);
+-webkit-mask-image: radial-gradient(120% 80% at 0% 50%, black 60%, transparent 100%);
+z-index: 1;
+}
+
+.hero-text {
+max-width: 600px;
+position: relative;
+z-index: 5;
+}
+
+.hero-text h1 {
+font-size: 56px;
+font-weight: 800;
+margin-bottom: 12px;
+}
+
+.hero-text h2 {
+font-size: 22px;
+font-weight: 400;
+opacity: 0.8;
+margin-bottom: 20px;
+}
+
+.hero-text p {
+font-size: 16px;
+line-height: 1.6;
+opacity: 0.85;
+margin-bottom: 32px;
+}
+
+.buttons button {
+padding: 14px 32px;
+border-radius: 999px;
+border: 1px solid #ffffff;
+background: transparent;
+color: #ffffff;
+font-size: 14px;
+cursor: pointer;
+}
+
+.products {
+padding: 120px 60px;
+}
+
+.products h3 {
+font-size: 32px;
+margin-bottom: 40px;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: rgba(255,255,255,0.05);
+border-radius: 16px;
+padding: 40px;
+text-align: center;
+}
+
+.contact {
+padding: 120px 60px;
+max-width: 700px;
+}
+
+.contact h3 {
+font-size: 32px;
+margin-bottom: 24px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+input, textarea {
+padding: 14px;
+border-radius: 12px;
+border: none;
+font-family: Inter, sans-serif;
+}
+
+textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+form button {
+padding: 14px;
+border-radius: 999px;
+border: none;
+background: #ffffff;
+color: #000000;
+font-weight: 600;
+cursor: pointer;
+}
+
+footer {
+display: flex;
+gap: 24px;
+padding: 40px 60px;
+opacity: 0.6;
+font-size: 14px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -23,9 +189,7 @@
 </header>
 
 <section id="home" class="hero">
-<div class="hero-bg">
-<img src="Compguy.png" class="hero-bg-image">
-</div>
+<div class="hero-bg"></div>
 
 <div class="hero-text">
 <h1>Centene Technologies.</h1>
@@ -39,13 +203,6 @@ Centene Technologies is a modern digital platform built to help teams create, la
 <button class="outline">Get Started</button>
 </a>
 </div>
-</div>
-
-<div class="hero-art">
-<div class="blob b1"></div>
-<div class="blob b2"></div>
-<div class="blob b3"></div>
-<div class="lines"></div>
 </div>
 </section>
 
@@ -81,8 +238,5 @@ Centene Technologies is a modern digital platform built to help teams create, la
 <span>Company</span>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
-
-
